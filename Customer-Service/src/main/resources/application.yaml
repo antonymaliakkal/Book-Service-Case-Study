@@ -13,7 +13,9 @@ spring:
     hibernate:
       ddl-auto: create
     database-platform: org.hibernate.dialect.H2Dialect
-
-
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
 server:
   port: 8200

@@ -1,26 +1,6 @@
-#spring:
-#  application:
-#    name: Order-Service
-#  datasource:
-#    url: jdbc:h2:mem:order
-#    username: root
-#    password: root
-#  h2:
-#    console:
-#      enabled: true
-#      path: /h2
-#  jpa:
-#    hibernate:
-#      ddl-auto: create
-#    database-platform: org.hibernate.dialect.H2Dialect
-#
-#server:
-#  port: 8300
-
-
 spring:
   application:
-    name: Book-Service
+    name: Order-Service
   datasource:
     url: jdbc:h2:mem:ordering
     username: root
@@ -36,3 +16,12 @@ spring:
 
 server:
   port: 8400
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+
+logging:
+  level:
+    com.netflix.eureka: DEBUG
